@@ -5,36 +5,3 @@ h1 {
     font-style:oblique;
     color:dimgrey;
 }
-/* Estilos padrão (modo claro) */
-body {
-    background-color: burlywood;
-    color: black;
-    transition: background 0.5s, color 0.5s;
-}
-
-/* Modo escuro ativado quando o checkbox está marcado */
-#modo-noturno:checked ~ body {
-    background-color: black;
-    color: white;
-}
-
-/* Mudando a cor do título no modo escuro */
-#modo-noturno:checked ~ body h1 {
-    color: lightgray;
-}
-
-/* Estilizando o botão */
-.switch {
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Quando o checkbox está ativado (modo escuro), muda a cor do botão */
-#modo-noturno:checked + .switch {
-    background-color: darkblue;
-}

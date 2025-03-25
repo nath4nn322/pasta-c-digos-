@@ -58,21 +58,33 @@
             margin: 0 auto;
         }
         
-        img {
+        .content-image {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px auto;
-            border-radius: 5px;
+            margin: 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
         
         ul {
             padding-left: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
         
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
@@ -93,10 +105,11 @@
             <li>Praticar exercícios (como forma de aliviar o psicológico)</li>
             <li>Realizar revisões sobre o conteúdo visto</li>
             <li>Ter momentos de lazer e descanso</li>
-            <li>Ter pensamentos positivos. (sem se inferiorizar ou se culpar)</li>
+            <li>Ter pensamentos positivos (sem se inferiorizar ou se culpar)</li>
         </ul>
         
-        <img src="rotina vestibular.jfif" alt="Estudante se preparando para vestibular">
+        <!-- IMAGEM ABAIXO DA LISTA -->
+        <img src="rotina vestibular.jfif" alt="Estudante se preparando para vestibular" class="content-image">
         
         <p>Após ter isso planejado e arrumado, é preciso ter um ponto de partida, ele determinará em qual ponto você está apto para começar os estudos. Isso pode ser descoberto com resoluções de testes, que vão dos mais simples ao mais complexo.</p>
         

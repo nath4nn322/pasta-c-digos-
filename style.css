@@ -1,123 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalizador de Cores</title>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --primary-color: #6200ee;
-            --user-bg-color: #ffffff; /* Nova variável para a cor escolhida */
-        }
-        
-        .dark-mode {
-            --bg-color: #121212;
-            --text-color: #f5f5f5;
-            --primary-color: #bb86fc;
-        }
-        
-        body {
-            background-color: var(--user-bg-color); /* Usa a cor escolhida */
-            color: var(--text-color);
-            font-family: Arial, sans-serif;
-            transition: all 0.3s ease;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--bg-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        .color-picker {
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        button:hover {
-            opacity: 0.9;
-        }
-        
-        h1 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
+        /* ===== VARIÁVEIS GLOBAIS (modo claro padrão) ===== */
+:root {
+    --bg-color: #ffffff;       /* Cor de fundo (claro) */
+    --text-color: #333333;     /* Cor do texto (escuro) */
+    --primary-color: #6200ee;  /* Cor de destaques (botões, links) */
+}
+
+/* ===== VARIÁVEIS DO MODO ESCURO ===== */
+.dark-mode {
+    --bg-color: #121212;       (Adicione outros elementos conforme necessário) */ /* Cor de fundo (escuro) */
+    --text-color: #f5f5f5;     /* Cor do texto (claro) */
+    --primary-color: #bb86fc;  /* Cor de destaques ajustada */
+}
+
+/* ===== APLICAÇÃO DAS VARIÁVEIS ===== */
+body {
+    background-color:beige
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */
+}
+
+/* Exemplo: estilizando botões e títulos */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+/* (Adicione outros elementos conforme necessário) */
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Personalize seu Fundo</h1>
-        
-        <div class="color-picker">
-            <label for="bgColor">Escolha uma cor de fundo:</label>
-            <input type="color" id="bgColor" value="#ffffff">
-            <button onclick="applyColor()">Aplicar Cor</button>
-        </div>
-        
-        <button id="themeToggle">Alternar para Modo Escuro</button>
-        
-        <p>Este sistema permite:</p>
-        <ul>
-            <li>Escolher QUALQUER cor de fundo</li>
-            <li>Alternar entre modo claro e escuro</li>
-            <li>As configurações são salvas automaticamente</li>
-        </ul>
-    </div>
-
-    <script>
-        // Aplicar cor escolhida
-        function applyColor() {
-            const color = document.getElementById('bgColor').value;
-            document.body.style.setProperty('--user-bg-color', color);
-            localStorage.setItem('userBgColor', color);
-        }
-        
-        // Sistema de modo claro/escuro
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Carregar preferências salvas
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            const savedColor = localStorage.getItem('userBgColor');
-            
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-                themeToggle.textContent = 'Modo Claro';
-            }
-            
-            if (savedColor) {
-                document.body.style.setProperty('--user-bg-color', savedColor);
-                document.getElementById('bgColor').value = savedColor;
-            }
-        });
-        
-        // Alternar tema
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            
-            themeToggle.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-    </script>
-</body>
-</html>

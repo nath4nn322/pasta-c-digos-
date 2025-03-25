@@ -25,6 +25,8 @@
             margin: 0;
             padding: 20px;
             line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
         }
         
         h1, h2 {
@@ -56,14 +58,18 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
+            padding-bottom: 120px; /* Espaço para a imagem */
         }
         
-        img {
-            max-width: 100%;
+        .corner-image {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 150px; /* Ajuste o tamanho conforme necessário */
             height: auto;
-            display: block;
-            margin: 20px auto;
             border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 100;
         }
         
         ul {
@@ -96,8 +102,6 @@
             <li>Ter pensamentos positivos (sem se inferiorizar ou se culpar)</li>
         </ul>
         
-        <img src="rotina vestibular.jfif" alt="Estudante se preparando para vestibular">
-        
         <p>Após ter isso planejado e arrumado, é preciso ter um ponto de partida, ele determinará em qual ponto você está apto para começar os estudos. Isso pode ser descoberto com resoluções de testes, que vão dos mais simples ao mais complexo.</p>
         
         <div class="theme-toggle-container">
@@ -105,9 +109,13 @@
         </div>
     </div>
 
+    <!-- Imagem no canto esquerdo -->
+    <img src="rotina vestibular.jfif" alt="Estudante se preparando para vestibular" class="corner-image">
+
     <script>
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
+        const cornerImage = document.querySelector('.corner-image');
         
         // Verifica se há preferência salva no localStorage
         const savedTheme = localStorage.getItem('theme');

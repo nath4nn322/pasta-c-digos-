@@ -23,5 +23,9 @@
         h1, h2, h3 {
             color: #6200EE; /* Roxo para títulos */
         }
+        
+     .imagem {
+    width: 30%;
+     }
     </style>
 </head>

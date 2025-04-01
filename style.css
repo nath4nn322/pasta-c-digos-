@@ -7,6 +7,9 @@
             margin: 0;
             padding: 20px;
             transition: background-color 0.3s; /* Suaviza transição de tema */
+            .imagem {
+                width: 40%;
+            
         }
 
         /* ===== ELEMENTOS PRINCIPAIS ===== */
@@ -21,10 +24,6 @@
 
         h1, h2, h3 {
             color: #6200EE; /* Roxo para títulos */
-        }
-        
-     .imagem {
-    width: 40%;
-     }
+        }     }
     </style>
 </head>

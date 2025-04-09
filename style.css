@@ -1,29 +1,27 @@
-
-        /* ===== CORES BÁSICAS ===== */
-        body {
-            background-color: #F5F5DC; /* Bege */
-            color: #333333; /* Cor do texto */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            transition: background-color 0.3s; /* Suaviza transição de tema */
-            .imagem {
-                width: 100%;
-            
-        }
-
-        /* ===== ELEMENTOS PRINCIPAIS ===== */
-        button {
-            background-color: #6200EE; /* Roxo */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        h1, h2, h3 {
-            color: #6200EE; /* Roxo para títulos */
-        }     }
-    </style>
-</head>
+body{
+    background-color: rgb(179, 231, 164);
+    text-align: center;
+}
+h1{
+    font-size: xx-large;
+    font-style: italic;
+    color: #fac412fd;
+}
+h2{
+    font-size: x-large;
+    font-style: italic;
+    color: #ffb71c;
+}
+h3{
+    color: #1410dfe0;
+}
+.bolsonaro{
+    width: 20%;
+}
+ul {
+    list-style-position: inside;
+    text-align: center;
+}
+.Jair{
+    width: 25%;
+}

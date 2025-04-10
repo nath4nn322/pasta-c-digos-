@@ -1,27 +1,40 @@
-body{
+body {
     background-color: rgba(247, 11, 11, 0.514);
     text-align: center;
+    margin: 0;
+    padding: 20px; /* Adicionado para espaçamento */
+    min-height: 100vh; /* Garante que o fundo cubra toda a tela */
 }
-h1{
+
+h1 {
     font-size: xx-large;
     font-style: italic;
-    color: #f7f7f700;
+    color: #f7f7f7; /* Corrigido - removida transparência */
 }
-h2{
+
+h2 {
     font-size: x-large;
     font-style: italic;
     color: #ffee00;
 }
-h3{
+
+h3 {
     color: #ffffffe0;
 }
-.Luiz{
+
+/* Verifique se estas classes existem no seu HTML exatamente assim */
+.luiz { /* Sugiro usar sempre minúsculas para classes */
     width: 20%;
+    margin: 0 auto; /* Centraliza se for uma imagem */
 }
+
 ul {
     list-style-position: inside;
     text-align: center;
+    padding-left: 0; /* Remove padding padrão */
 }
-.Inácio{
+
+.inácio { /* Sugiro usar sempre minúsculas para classes */
     width: 25%;
+    margin: 0 auto; /* Centraliza se for uma imagem */
 }

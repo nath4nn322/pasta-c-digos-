@@ -1,116 +1,15 @@
-/* ESTILOS GERAIS */
-body {
+body{
     background-color: rgba(247, 11, 11, 0.514);
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    min-height: 100vh;
-    text-align: center;
-    color: #333;
 }
-
-/* TIPOGRAFIA */
-h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 20px 0;
-    padding: 15px;
-    background-color: rgba(227, 25, 25, 0.7);
-    border-radius: 8px;
-    display: inline-block;
+h1{
+     font-size: xx-large;
+    color: red;
 }
-
-h2 {
-    font-size: 1.8rem;
-    color: #ffee00;
-    margin: 25px 0 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #ffee00;
-    display: inline-block;
+h3{
+    font-size: large;
+    color: black;
 }
-
-h3 {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin: 20px 0 10px;
-}
-
-h4 {
-    font-size: 1.2rem;
-    color: #f8f8f8;
-    font-style: italic;
-}
-
-/* ELEMENTOS ESPECÍFICOS */
-.foto-lula {
-    width: 250px;
-    border: 4px solid #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-    transition: transform 0.3s;
-}
-
-.foto-lula:hover {
-    transform: scale(1.03);
-}
-
-ul {
-    list-style-position: inside;
-    text-align: center;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-ul li {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-    list-style-type: none;
-}
-
-.timeline li {
-    background-color: rgba(255, 238, 0, 0.15);
-    border-left: 4px solid #ffee00;
-}
-
-strong {
-    color: #ffee00;
-    font-weight: bold;
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 2rem;
-        padding: 10px;
-    }
-    
-    .foto-lula {
-        width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    ul li {
-        padding: 8px;
-        font-size: 0.9rem;
-    }
+h2{
+    font-size: x-large;
+    color: yellow;
 }
